@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(){
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+
+    // prompt sempre retorna string, mas ao realizar uma operacao de multiplicacao ou divisao o javascript, entende como numero.
+    var vitorias = parseInt(prompt("Entre com numero de vitorias."));
+    var empates = parseInt(prompt("Entre com numero de empates."));
+
+    var pontos = (vitorias * 3) + empates;
+
+    mostra("Pontos do seu time " + pontos)
+
+    if(pontos>28){
+        mostra("Seu time esta melhor que o ano passado.");
+    }
+
+    if(pontos<28){
+        mostra("Seu time esta pior que o ano passado.");
+    }
+
+    if(pontos==28){
+        mostra("Seu time esta igual que o ano passado.");
+    }
+
+    mostra("Fim")
+
+</script>
